@@ -1,2 +1,4 @@
-print("Hello ,World this is my first code and i am happy")
-print("i am so happy to see this code runing")
+from fractions import Fraction
+c = (Fraction(11,25)) + (Fraction(7,9))
+print (float(c))
+print(str(" "))

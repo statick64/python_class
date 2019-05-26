@@ -5,9 +5,9 @@
 ##b=90
 ##print(a+b)
 
-name = "ada"
-age = 30
-relationship = "friends"
+##name = "ada"
+#age = 30
+#relationship = "friends"
 
 ##print("In ",age, "years ", name "will be ", end = "")
 ##print(20+30)
@@ -19,14 +19,18 @@ relationship = "friends"
 
 
 ##fruit = "bolou"
-discount = 0.15
-price = 40000
-original_price = 40000
-discount_percent = price + discount * price
-new_price = original_price - discount_percent
+#discount = 0.15
+#price = 40000
+#original_price = 40000
+#discount_percent = price + discount * price
+#new_price = original_price - discount_percent
 
 ##print("Hello", name,"your bill for",fruit,"is",quantity + price)
 ##print("i got ",1,2,3,4,5,6,7,8,"m's ","in ","my ","bank ","account")
 
 ##print("one,two,three,four")
-print("Hello",name,"because we are",relationship,"will drop the price from", origina_price,"to", new_price,"at a discount of",discount_)
+#print("Hello",name,"because we are",relationship,"will drop the price from", original_price,"to", new_price,"at a discount of",discount_percent)
+
+
+
+print(2+2)

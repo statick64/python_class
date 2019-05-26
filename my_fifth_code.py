@@ -1,12 +1,13 @@
-name = "ada"
-age = 30
-relationship = "friends"
-discount = 0.15
-price = 40000
-original_price = 40000
-discount_percent = discount * price
-new_price = original_price - discount_percent
-sentence = "Hello " + (name) + " "+ "because we are " + (relationship) + " " + "will drop the price from " + str(original_price) + " to " + str(int(new_price)) + " at a discount of " + str(int(discount_percent))
+number = int(input("input number you want to find divisor to "))
 
-print (sentence)
-print ("baby, baby cant you see this world's for you and me it's  alright")
+a = list(range(2,number)
+a2 = []
+for i in a:
+    if i % number == 0:
+        a2.append(i)
+if len(a2) == 1:
+    print("The only divisor for " + str(number) + "is " + a2)
+elif len(a2) > 1:
+    print("The numbers divisible by " + str(number) + "is " + a2)
+else:
+    print("no number divisible by " + str(number))
