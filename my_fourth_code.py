@@ -1,2 +1,0 @@
-name = "ada"
-print(name)

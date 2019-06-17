@@ -1,4 +1,4 @@
-from fractions import Fraction
-c = (Fraction(11,25)) + (Fraction(7,9))
-print (float(c))
-print(str(" "))
+import random
+word = ["brother","mother","sister","mister","father"]
+for char in random.choice(word):
+    print(char)

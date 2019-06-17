@@ -19,11 +19,11 @@ while turns < 0:
             failed += 1
         if failed == 0:
             print("\nWe have a winner\n")
-    guess = input("Guess a letter: ")
-    guesses += guess
-    if guess not in word:
-        turns -= 1
-        print("\nTry again\n")
-        print(f"You have {turns} left\n")
+        guess = input("Guess a letter: ")
+        guesses += guess
+        if guess not in word:
+            turns -= 1
+            print("\nTry again\n")
+            print(f"You have {turns} left\n")
         if turns == 0:
             print("You loose")
