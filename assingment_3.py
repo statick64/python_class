@@ -1,0 +1,64 @@
+name = """Emma
+Olivia
+Ava
+Isabella
+Sophia
+Charlotte
+Mia
+Amelia
+Harper
+Evelyn
+Abigail
+Emily
+Elizabeth
+Mila
+Ella
+Avery
+Sofia
+Camila
+Aria
+Scarlett
+Victoria
+Madison
+Luna
+Grace
+Chloe
+Penelope
+Layla
+Riley
+Zoey
+Nora
+Lily
+Eleanor
+Hannah
+Lillian
+Addison
+Aubrey
+Ellie
+Stella
+Natalie
+Zoe
+Leah
+Hazel
+Violet
+Aurora
+Savannah
+Audrey
+Brooklyn
+Bella
+Claire
+Skylar
+Lucy
+Paisley
+Everly
+Anna
+Caroline
+Nova
+Genesis
+Emilia
+Kennedy
+Samantha"""
+name_small = name.lower()
+longest_letter = (max(((letter, name_small.count(letter)) for letter in name_small),key=lambda x:[1])[0])
+co_letter = name_small.count(longest_letter)
+print(f"The most occurring letter in name is {longest_letter} with {co_letter} occurrence")
