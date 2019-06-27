@@ -58,8 +58,7 @@ Genesis
 Emilia
 Kennedy
 Samantha"""
-names = name.split("\n")
-longest_name = max(len(i) for i in names)
-for i in names:
-        if len(i) == longest_name:
-                print(i, end=" ")
+name_small = name.lower()
+longest_letter = (max(((letter, name_small.count(letter)) for letter in name_small),key=lambda x:[1])[0])
+co_letter = name_small.count(longest_letter)
+print(f"The most occurring letter in name is {longest_letter} with {co_letter} occurrence")

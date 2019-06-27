@@ -1,70 +1,20 @@
-name = """Emma
-Olivia
-Ava
-Isabella
-Sophia
-Charlotte
-Mia
-Amelia
-Harper
-Evelyn
-Abigail
-Emily
-Elizabeth
-Mila
-Ella
-Avery
-Sofia
-Camila
-Aria
-Scarlett
-Victoria
-Madison
-Luna
-Grace
-Chloe
-Penelope
-Layla
-Riley
-Zoey
-Nora
-Lily
-Eleanor
-Hannah
-Lillian
-Addison
-Aubrey
-Ellie
-Stella
-Natalie
-Zoe
-Leah
-Hazel
-Violet
-Aurora
-Savannah
-Audrey
-Brooklyn
-Bella
-Claire
-Skylar
-Lucy
-Paisley
-Everly
-Anna
-Caroline
-Nova
-Genesis
-Emilia
-Kennedy
-Samantha"""
-names = name.split("\n")
-name_of_search = input("Enter name ")
-name_not_search = True
-for i in names:
-    if i == name_of_search:
-        print(f"{i} is available")
-        name_not_search = False
-        break
-if name_not_search == True:
-    print("not available")
+x = {'foo', 'bar', 'baz', 'foo', 'qux'}
+print(x)
+x = {'q', 'u', 'u', 'x'}
+print(x) 
+x1 = {'foo', 'bar', 'baz'}
+x2 = {'baz', 'qux', 'quux'}
+print(x1|x2)
+a = {1, 2, 3, 4}
+b = {2, 3, 4, 5}
+c = {3, 4, 5, 6}
+d = {4, 5, 6, 7}
+e = a.union(b,c,d)
+print(e)
+x1 = {'foo', 'bar', 'baz'}
+x2 = {'baz', 'qux', 'quux'}
+print(x1 & x2)
+print(a&b&c&d)
+print(a-b-c-d)
+s = set('a', 'b', 'c')
+print(s)

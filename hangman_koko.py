@@ -1,26 +1,22 @@
 import time
+import random
 name = input("Bromida insert your name: ")
 print(f"\nWelcome {name}, oya begin dey guess\n")
-
-time.sleep(1)
-print("Oya begin ")
-time.sleep(0.5)
 word = ["brother","mother","sister","mister","father"]
+guesses = ""    
 turns = 10
-guesses = ""
-while turns < 0:
-    import random
+while turns>= 0:
     failed = 0
     for char in random.choice(word):
         if char in guesses:
-            print(char)
+            print(char, end="")
         else:
-            print("_")
+            print("_",end="")
             failed += 1
         if failed == 0:
             print("\nWe have a winner\n")
         guess = input("Guess a letter: ")
-        guesses += guess
+        guesses = guess
         if guess not in word:
             turns -= 1
             print("\nTry again\n")

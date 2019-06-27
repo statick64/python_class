@@ -58,11 +58,11 @@ Genesis
 Emilia
 Kennedy
 Samantha"""
-names = name.split("\n")
-panny = names.lower()
+small_names = name.lower()
+names = small_names.split("\n")
 position_of_name = 0
 name_inp = input("input name: ")
 for i in names:
     position_of_name += 1
     if i == name_inp:
-        print(f"\n {name_inp} is positioned at {position_of_name}")
+        print(f"\n {name_inp} is positioned at {position_of_name + 1}")
