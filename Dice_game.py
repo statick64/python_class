@@ -7,9 +7,6 @@ while rolls < 10:
     print(first_roll,second_roll)
     if first_roll == 6 and second_roll == 6:
         
-        break
-        
         print("You Have Won")
     else:
-        
         print("You Have Lost")
