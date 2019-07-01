@@ -1,0 +1,10 @@
+f= open("shop.txt","w+")
+def firstloop(small_chioce):
+    time.sleep(1)
+    Main_cart.append("Bread")
+    price.append("N20")
+    time.sleep(1)
+    print("\nprocessing.....\n")
+    print(Main_cart)
+    time.sleep(1)
+    print(f"{choice} has been added to your cart\n")
