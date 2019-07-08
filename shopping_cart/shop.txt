@@ -1,7 +1,1 @@
-Nuts:Cashew Nuts
-Fresh Fruit:Pineapple
-Mixed Nuts:Packies
-organic vegetables:Potatoes
-Vegetables:Green pepper
-Meat:Hot Dog Sausages
-Chips:Lays
+{'orange': {'name': 'orange', 'price': 200, 'quantity': 10}}
