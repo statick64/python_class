@@ -7,9 +7,11 @@ conection = pymysql.connect(host ='localhost',
                             db ='univelcity',
                             charset ='utf8mb4',
                             cursorclass=pymysql.cursors.DictCursor)
+class Sums_Within_Groups():
 
-file_name = 'loans.csv'
-file = open(file_name,'r')
+    def read_file(self):
+        file_name = 'loans.csv'
+        file = open(file_name,'r')
 
-data = file.readline()
-print(data)
+        data = file.readline()
+        print(data)

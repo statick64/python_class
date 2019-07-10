@@ -1,8 +1,5 @@
-num3 = 84
-den3 = 102
-
-for i in range(1,10):
-    if num3 % i == 0 and den3 % i == 0:
-            a = num3/i
-            b = den3/i
-print(a,b)
+count_list = [1,2,3,a,5,6,7,8,b,10]
+for key in cart:
+            price = cart[key]["price"]
+            quantity = cart[key]["quantity"]
+            print(int(price)* quantity)

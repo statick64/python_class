@@ -57,7 +57,7 @@ class Shop:
         single_product = all_products[required_product]
         return single_product
     
-class User():
+class User:
 
     def __init__(self,username):
         self.username = username
@@ -93,7 +93,7 @@ class User():
     
     def balance(self):
         balance = self.read_file_cart("balance")
-        print(balance)
+        print(f"Your wallet has {balance}  ")
         return balance
     
     def cart(self):
@@ -128,16 +128,35 @@ class User():
         self.write(all_users)
         print(f"New product {fetched_product['name']} successfully added to cart")
     
-    def amount_of_cart(self):
+    def total_price(self):
         cart = self.new_cart()
+        sum_total = 0
         for key in cart:
             price = cart[key]["price"]
-            quantity = cart[key]["quantity"]
-            print(price,quantity)
-        return cart
+            qauntity = cart[key]["quantity"]
+            total = (int(price) * qauntity)
+            sum_total += total
+        full_total = sum_total
+        print(f"The total price of your cart is {full_total}")
 
+        return full_total
     
-    
+    def payment(self):
+        cart = self.new_cart()
+        balance = self.balance()
+        price = self.total_price()
+        amount = int(balance) - price
+        if price > int(balance):
+            print("you do not have suficient funds to carry out this operation")
+        else:
+            print(f"your wallet has {amount}")
+        all_users = self.read_file_cart("all")
+        all_users[self.username]["cart"] = cart
+        self.write(all_users)
+        return all_users
+
+
+
 
     def remove_from_cart(self):
         selected_prod = input("Please enter your product of choice : ")
@@ -155,10 +174,10 @@ class User():
     
 
 
-active_shop = Shop()
-active_shop.add()
-#active_user = User("koko")
-#active_user.add_to_cart()
+#active_shop = Shop()
+#active_shop.add()
+active_user = User("koko")
+active_user.payment()
 #active_user.amount_of_cart()
 
 
