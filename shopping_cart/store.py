@@ -115,13 +115,13 @@ class User:
         sp_name, sp_amount = new_selected_prod[0], new_selected_prod[1]
         fetched_product = self.shop.get_single_product(sp_name)
         fetched_product["quantity"] = int(sp_amount)
+        shop = self.shop
         cart = self.cart()
 
         if cart.get(fetched_product["name"], False) :
             cart[fetched_product["name"]]["quantity"] += fetched_product["quantity"]
         else:
-            cart[fetched_product["name"]] = fetched_product
-
+            cart[fetched_product["name"]] = fetched_product 
         all_users = self.read_file_cart("all")
         all_users[self.username]["cart"] = cart
 
@@ -142,7 +142,6 @@ class User:
         return full_total
     
     def payment(self):
-        cart = self.new_cart()
         balance = self.balance()
         price = self.total_price()
         amount = int(balance) - price
@@ -151,7 +150,7 @@ class User:
         else:
             print(f"your wallet has {amount}")
         all_users = self.read_file_cart("all")
-        all_users[self.username]["cart"] = cart
+        all_users[self.username]["balance"]= amount
         self.write(all_users)
         return all_users
 
@@ -177,7 +176,7 @@ class User:
 #active_shop = Shop()
 #active_shop.add()
 active_user = User("koko")
-active_user.payment()
+active_user.add_to_cart()
 #active_user.amount_of_cart()
 
 
